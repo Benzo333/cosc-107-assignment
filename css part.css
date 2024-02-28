@@ -1,29 +1,82 @@
-#countdown {
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' , sans-serif;
+    box-sizing: border-box;
+    }
+    body{
+        background-color: #c5e5fc;
+    }
+    .content{
     display: flex;
-    padding: 20px;
-    font-size: 2em;
-}
+    flex-direction: row;
+    }
+    .content img {
+        width: 50%;
+        height: 50%;
+        margin: 70px 7px 7px 27px;
+    }
+    .text p{
+        margin-top: 70px;
+        margin-left: 15px;
+        line-height: 1.5;
+        letter-spacing: 2px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .text{
+        margin-top: 10px;
+    }
+    .count{
+        display: flex;
+        margin-top: 30px;
+        text-align: center;
+        color: white;
+        margin-left: 10px;
+        line-height: 2.0rem;
+    }
+    .count p{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .count div {
+        flex-basis: 100px;
+        border: solid #063251;
+        border-radius: 5px;
+        margin-right: 20px;
+        background-color: #063251;
+        height: 90px;
+        padding-top: 15px;
+    }
+    @media (max-width: 600px) {
+       .content{
+        flex-direction: column;
 
-#countdown div {
-    padding: 0 10px;
-}
-#sharp{
-    color: #2d87c8;
-}
-.count {
-    display: flex;
-    flex-basis: 100px;
-    width: 50%;
-    height: 90px;
-    color: white;
-    text-align: center;
-}
-.count div{
-    flex-basis: 100px;
-    background-color: #063251;
-    border-radius: 5px;
-    margin-right: 20px;
-}
-body{
-    background-color: #c5e5fc;
-}
+       }
+       .main{
+        margin-left: 20px;
+        margin-top: -50px;
+        width: 92%;
+       }
+       .content img{
+        width: 90%;
+        height: 300px;
+        margin-top: 7px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+       }
+       .text{
+        width: 90%;
+       }
+       .count div{
+        margin-bottom: 15px;
+        width: 90%;
+       }
+         body{
+        margin-left: -12px;
+       }
+    }
