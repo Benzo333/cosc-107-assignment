@@ -1,23 +1,27 @@
-function updateCountdown() {
-    const endTime = new Date("march 7, 2024 11:00:00").getTime();
-    const now = new Date().getTime();
-    const timeLeft = endTime - now;
+function countdown() {
+    var endDate = new Date("march 10, 2024 11:30:00").getTime();
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = endDate - now;
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (timeLeft < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(x);
+            // the countdown ends
+            document.getElementById("countdown").innerHTML = "Countdown ended.";
+        }
+    }, 1000);
 }
+// Start the countdown
+countdown();
 
-updateCountdown();
-const x = setInterval(updateCountdown, 1000);
