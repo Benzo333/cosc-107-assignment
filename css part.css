@@ -1,0 +1,29 @@
+#countdown {
+    display: flex;
+    padding: 20px;
+    font-size: 2em;
+}
+
+#countdown div {
+    padding: 0 10px;
+}
+#sharp{
+    color: #2d87c8;
+}
+.count {
+    display: flex;
+    flex-basis: 100px;
+    width: 50%;
+    height: 90px;
+    color: white;
+    text-align: center;
+}
+.count div{
+    flex-basis: 100px;
+    background-color: #063251;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+body{
+    background-color: #c5e5fc;
+}
